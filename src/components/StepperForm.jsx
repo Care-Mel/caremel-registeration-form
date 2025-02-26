@@ -1,9 +1,8 @@
 // import React from "react";
-import BookingInfo from "./Stepper/BookingInfo";
+import BookingInfo from "./stepper/BookingInfo";
 import HomeRule from "./Stepper/HomeRule";
 import { motion } from "framer-motion";
 import CaregiverPower from "./Stepper/CaregiverPower";
-import AgreeForm from "./Stepper/AgreeForm";
 import CareRule from "./Stepper/CareRule";
 // import SuccessModal from "./StepOne/SuccessModal";
 // import { Stepper } from "react-form-stepper";
@@ -94,28 +93,6 @@ const StepperForm = ({ currentStep }) => {
             <CaregiverPower />
           </motion.div>
         )}
-        {/* {currentStep === 6 && (
-          <motion.div
-            key={6}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <AgreeForm />
-          </motion.div>
-        )} */}
-        {/* {currentStep === 5 && (
-          <motion.div
-            key={5}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            <SuccessModal />
-          </motion.div>
-        )} */}
       </div>
     </div>
   );
