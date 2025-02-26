@@ -1,5 +1,5 @@
 // import React from "react";
-import BookingInfo from "./stepper/BookingInfo";
+import BookingInfo from "./Stepper/BookingInfo";
 import HomeRule from "./Stepper/HomeRule";
 import { motion } from "framer-motion";
 import CaregiverPower from "./Stepper/CaregiverPower";
