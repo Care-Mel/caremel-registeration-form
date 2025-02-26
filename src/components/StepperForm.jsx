@@ -1,9 +1,9 @@
 // import React from "react";
-import BookingInfo from "./Stepper/BookingInfo";
-import HomeRule from "./Stepper/HomeRule";
+import BookingInfo from "./stepform/BookingInfo";
+import HomeRule from "./stepform/HomeRule";
 import { motion } from "framer-motion";
-import CaregiverPower from "./Stepper/CaregiverPower";
-import CareRule from "./Stepper/CareRule";
+import CaregiverPower from "./stepform/CaregiverPower";
+import CareRule from "./stepform/CareRule";
 // import SuccessModal from "./StepOne/SuccessModal";
 // import { Stepper } from "react-form-stepper";
 
