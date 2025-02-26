@@ -1,10 +1,10 @@
 // import React from "react";
-import BookingInfo from "./StepOne/BookingInfo";
-import HomeRule from "./StepOne/HomeRule";
+import BookingInfo from "./Stepper/BookingInfo";
+import HomeRule from "./Stepper/HomeRule";
 import { motion } from "framer-motion";
-import CaregiverPower from "./StepOne/CaregiverPower";
-import AgreeForm from "./StepOne/AgreeForm";
-import CareRule from "./StepOne/CareRule";
+import CaregiverPower from "./Stepper/CaregiverPower";
+import AgreeForm from "./Stepper/AgreeForm";
+import CareRule from "./Stepper/CareRule";
 // import SuccessModal from "./StepOne/SuccessModal";
 // import { Stepper } from "react-form-stepper";
 
@@ -75,50 +75,26 @@ const StepperForm = ({ currentStep }) => {
 
       <div className="mt-5">
         {currentStep === 2 && (
-          <motion.div
-            key={2}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={2} variants={formVarient} initial="hidden" animate="visible" exit="exit">
             <BookingInfo />
           </motion.div>
         )}
         {currentStep === 3 && (
-          <motion.div
-            key={3}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={3} variants={formVarient} initial="hidden" animate="visible" exit="exit">
             <CareRule />
           </motion.div>
         )}
         {currentStep === 4 && (
-          <motion.div
-            key={4}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={4} variants={formVarient} initial="hidden" animate="visible" exit="exit">
             <HomeRule />
           </motion.div>
         )}
         {currentStep === 5 && (
-          <motion.div
-            key={5}
-            variants={formVarient}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+          <motion.div key={5} variants={formVarient} initial="hidden" animate="visible" exit="exit">
             <CaregiverPower />
           </motion.div>
         )}
-        {currentStep === 6 && (
+        {/* {currentStep === 6 && (
           <motion.div
             key={6}
             variants={formVarient}
@@ -128,7 +104,7 @@ const StepperForm = ({ currentStep }) => {
           >
             <AgreeForm />
           </motion.div>
-        )}
+        )} */}
         {/* {currentStep === 5 && (
           <motion.div
             key={5}

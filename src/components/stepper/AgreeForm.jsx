@@ -18,7 +18,7 @@ function AgreeForm({ currentStep }) {
             setName(e.target.value);
             localStorage.setItem("name", e.target.value);
           }}
-          className="ps-5 text-[18px]  border-none focus:outline-none flex-grow"
+          className="ps-5 text-[18px] border-4 border-gray-100 focus:outline-none flex-grow"
         />
         <span className="p-2 bg-white">
           <FaRegUserCircle size={30} className="text-gray-400 mr-5" />
@@ -33,7 +33,7 @@ function AgreeForm({ currentStep }) {
             setNrc(e.target.value);
             localStorage.setItem("NRC", e.target.value);
           }}
-          className="ps-5 text-[18px] border-none focus:outline-none flex-grow"
+          className="ps-5 text-[18px] border-4 border-gray-100 focus:outline-none flex-grow"
         />
         <span className="p-2 bg-white">
           <FaRegAddressCard size={30} className="text-gray-400 mr-5" />

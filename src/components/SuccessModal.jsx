@@ -48,13 +48,12 @@ function SuccessModal() {
             </div>
           </motion.div>
           {/* <img src={plus} className="mr-2 mt-3" /> */}
-          <span className="font-bold text-center text-[16px] leading-[40px]">
-            ယခုသတ်မှတ်ထားသော စည်းမျဉ်းစည်းကမ်းများကိုလိုက်နာပါမည်ဟု
-            သဘောတူညီမှုရရှိပြီးဖြစ်ပါသည်။ အကယ်၍
-            စည်းကမ်းဖောက်ဖျက်သည်များရှိခဲ့ပါက Care Mel Platform မှသတ်မှတ်ထားသော
-            ထိုက်သင့်သည့် ဒဏ်ကြေး (သိုမဟုတ်) Assign ပေးခြင်းရပ်နားမှုများ
-            (သိုမဟုတ်) Blacklist ထားခံရခြင်းများအား ပြုလုပ်သွားမည်ဖြစ်ပါသည်။
-          </span>
+          <div>
+            <p className="font-bold text-center mb-3 text-[28px] leading-[40px] text-primary">
+              Information Summited.
+            </p>
+            <span className="font-bold text-lg">We will inform you soon.</span>
+          </div>
         </div>
       </div>
     </div>
