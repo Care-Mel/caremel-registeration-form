@@ -124,15 +124,8 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
                 </div>
               )}
             </div>
-            <p className="text-sm text-primary mt-2 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+            <p className="text-sm mt-1 flex items-center gap-2">
+              <CircleAlert size={25} className="text-primary" />
               This information will help caregiver to make cultural & regional preparations.
             </p>
           </div>
@@ -210,7 +203,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
                 </div>
               </div>
 
-              <div>
+              <div className="mt-5">
                 <label className="label">Mobility Level</label>
                 <div className="relative mt-2">
                   <div

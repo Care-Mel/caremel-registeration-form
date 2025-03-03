@@ -59,7 +59,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
 
     try {
       const res = await axios.post("https://care-mel-api.onrender.com/api/v1/customer-form", data);
-      console.log(res);
+      // console.log(res);
       if (res.status === 201) {
         navigate("/success");
       }
@@ -73,9 +73,9 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="de">
       <div className="mt-10">
-        <div className="p-3 rounded-3xl shadow-sm border border-gray-300 mt-5 mb-10">
+        <div className="p-6 rounded-3xl shadow-sm border border-gray-300 mt-5 mb-10">
           <div className="space-y-6">
-            <div className="bg-[#f0f9f0] p-4 rounded-xl">
+            <div className="bg-[#f0f9f0] rounded-xl">
               <h3 className="header">Service Starting Date</h3>
               <div className="space-y-3">
                 <div className="w-full">
@@ -126,7 +126,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
               </div>
             </div>
 
-            <div className="bg-[#f0f9f0] p-4 rounded-xl">
+            <div className="bg-[#f0f9f0] rounded-xl">
               <h3 className="header">Service Ending Date</h3>
               <div className="space-y-3">
                 <div>
@@ -139,6 +139,10 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                       sx={{ width: "100%" }}
                       value={formData?.endDate || null}
                       onChange={(newValue) => {
+                        if (newValue < formData.startDate) {
+                          toast.error("Ending date must be greater than starting date.");
+                          return;
+                        }
                         updateFormData({ endDate: newValue });
                       }}
                     />
@@ -202,7 +206,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                 No
               </button>
             </div>
-            <div className="flex gap-2 items-center text-primary text-sm mt-2">
+            <div className="flex gap-2 items-center text-sm mt-2">
               <CircleAlert size={25} className="text-primary" />
               <p>This is use when giving service information to caregiver.</p>
             </div>
@@ -218,7 +222,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
               className="w-full p-4 rounded-xl border-2 border-gray-400 focus:outline-none focus:border-[#2d5a40] min-h-[100px]"
               placeholder="E.g Please make medication time be exact 8 hours apart."
             />
-            <div className="flex gap-2 items-center text-primary text-sm mt-2">
+            <div className="flex gap-2 items-center text-sm mt-2">
               <CircleAlert size={25} className="text-primary" />
               <p>This is use when giving service information to caregiver.</p>
             </div>

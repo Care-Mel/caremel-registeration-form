@@ -1,4 +1,5 @@
 import { CircleAlert } from "lucide-react";
+import { toast } from "sonner";
 // import { useNavigate } from "react-router-dom";
 
 const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
@@ -36,7 +37,7 @@ const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
         <h2 className="header">Address Information</h2>
         <div className="space-y-6">
           <div>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2">
               <label className="label">Township</label>
             </div>
             <input
@@ -46,7 +47,7 @@ const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
               value={formData.township}
               onChange={(e) => updateFormData({ township: e.target.value })}
             />
-            <div className="flex gap-2 items-center text-[#2d5a40] text-sm">
+            <div className="flex gap-2 mt-1 items-center text-[#2d5a40] text-sm">
               <CircleAlert size={25} className="text-primary" />
               <p> This is use when giving service information to caregiver.</p>
             </div>
@@ -76,8 +77,28 @@ const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
 
       <div>
         <button
-          onClick={() => onSubmit()}
-          className="font-sofia w-full bg-primary text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary"
+          onClick={() => {
+            if (
+              !formData.name ||
+              !formData.phoneNumber ||
+              !formData.township ||
+              !formData.detailAddress ||
+              !formData.nearestBusStop
+            ) {
+              toast.error("Please fill in all fields.");
+              return;
+            }
+            onSubmit();
+          }}
+          className={`font-sofia w-full text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary ${
+            !formData.name ||
+            !formData.phoneNumber ||
+            !formData.township ||
+            !formData.detailAddress ||
+            !formData.nearestBusStop
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-primary"
+          }`}
         >
           Next
         </button>
