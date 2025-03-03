@@ -1,10 +1,8 @@
-// import React from 'react'
 import { motion } from "framer-motion";
-// import form from "./../assets/image/form.png";
 
 function SuccessModal() {
   return (
-    <div className="mt-20">
+    <div className="flex flex-col justify-center items-center h-screen">
       <div className="">
         {/* <img src={form} className="mx-auto mb-5" /> */}
         <div className="text-center">

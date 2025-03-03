@@ -21,9 +21,9 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
           {careServices.map((service) => (
             <div
               key={service.id}
-              onClick={() => handleServiceSelect(service.id)}
+              onClick={() => handleServiceSelect(service.label)}
               className={`flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300 ease-in-out ${
-                formData.selectedServices === service.id
+                formData.selectedServices === service.label
                   ? "bg-primary text-white"
                   : "bg-white text-[#1a472a]"
               }`}
@@ -31,12 +31,12 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
               <p className="font-medium">{service.label}</p>
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  formData.selectedServices === service.id ? "border-white" : "border-gray-200"
+                  formData.selectedServices === service.label ? "border-white" : "border-gray-200"
                 }`}
               >
                 <div
                   className={`w-4 h-4 rounded-full ${
-                    formData.selectedServices === service.id ? "bg-white" : "bg-gray-200"
+                    formData.selectedServices === service.label ? "bg-white" : "bg-gray-200"
                   }`}
                 ></div>
               </div>

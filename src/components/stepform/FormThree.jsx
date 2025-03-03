@@ -181,7 +181,8 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
               />
             </div>
           )}
-          {selectedServices === "elderly" && (
+          {/* Elder Care __________________________________________________________ */}
+          {selectedServices === "Elderly Care" && (
             <div>
               <div>
                 <label className="label">Is the patient Deaf or hard of hearing?</label>
@@ -255,8 +256,8 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
               </div>
             </div>
           )}
-
-          {selectedServices === "chronic" && (
+          {/* Chronic __________________________________*/}
+          {selectedServices === "Chronic Disease Care" && (
             <div>
               {formData.hasInfection && (
                 <div className="mb-5">
@@ -270,7 +271,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
                   />
                 </div>
               )}
-              <div>
+              <div className="mb-5">
                 <label className="label">Is the patient Deaf or hard of hearing?</label>
                 <div className="flex mt-2 rounded-lg overflow-hidden border-2 border-primary">
                   <button
@@ -342,8 +343,8 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
               </div>
             </div>
           )}
-
-          {selectedServices === "hospital" && (
+          {/* Hospital Companion Care __________________________________*/}
+          {selectedServices === "Hospital Companion Care" && (
             <div>
               <label className="label">Mobility Level</label>
               <div className="relative mt-2">

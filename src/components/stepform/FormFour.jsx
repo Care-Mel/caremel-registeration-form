@@ -5,19 +5,22 @@ import { CircleAlert } from "lucide-react";
 import axios from "axios";
 import "react-datepicker/dist/react-datepicker.css";
 // import dayjs from "dayjs";
-import { DesktopDatePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Box } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 // import { de } from "date-fns/locale";
 import "dayjs/locale/de";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 // import { useNavigate } from "react-router-dom";
 
 const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
-  console.log(formData.startDate);
-  const submitForm = () => {
+  // console.log(formData.startDate);
+  const navigate = useNavigate();
+  const submitForm = async () => {
     // console.log(formData);
 
     const data = {
@@ -27,35 +30,43 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
       address: formData.detailAddress,
       busStop: formData.nearestBusStop,
       service: formData.selectedServices,
+      careGiverMealSupport: formData.mealsProvided,
+      startingDate: dayjs(formData.startDate).format("YYYY-MM-DD"),
+      startingTime: formData.startTime,
+      endingDate: dayjs(formData.endDate).format("YYYY-MM-DD"),
+      endingTime: formData.endTime,
+      additionalNotes: formData.additionalNotes,
       patientInformation: [
         {
           patientName: formData.patientName,
-          patientAge: formData.patientAge,
+          patientAge: formData.patientAge * 1,
           patientGender: formData.gender,
-          religion: formData.religion,
+          religious: formData.religion,
         },
       ],
       patientStatus: [
         {
           haveInfectiousDisease: formData.hasInfection,
           infectiousDiseaseName: formData.infectiousDiseaseName,
-          // havePaientDisease: formData.paientDiseaseName,
+          chronicDiseaseName: formData.paientDiseaseName,
           hardHearing: formData.isDeaf,
           mobilityLevel: formData.mobilityLevel,
-          startingDate: formData.startDate,
-          startingTime: formData.startTime,
-          endingDate: formData.endDate,
-          endingTime: formData.endTime,
-          additionalNotes: formData.additionalNotes,
-          // mealsProvided:formData.mealsProvided
         },
       ],
     };
 
-    console.log(data);
+    // console.log(data);
 
-    const res = axios.post("https://care-mel-api.onrender.com/api/v1/customer-form", data);
-    console.log(res);
+    try {
+      const res = await axios.post("https://care-mel-api.onrender.com/api/v1/customer-form", data);
+      console.log(res);
+      if (res.status === 201) {
+        navigate("/success");
+      }
+    } catch (error) {
+      toast.error(error.response.data.message);
+      // window.alert(error.response.data.message);
+    }
   };
   // console.log(addref.current.value);
 
@@ -78,7 +89,6 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                       value={formData?.startDate || null}
                       onChange={(newValue) => {
                         updateFormData({ startDate: newValue });
-                        console.log(dayjs(newValue).format("YYYY-MM-DD"));
                       }}
                     />
                   </Box>
@@ -92,7 +102,6 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                       value={formData?.startTime || ""}
                       onChange={(e) => {
                         updateFormData({ startTime: e.target.value });
-                        console.log(e.target.value);
                       }}
                     />
                     <span className="absolute right-3 top-1/2 -translate-y-1/2">
@@ -131,7 +140,6 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                       value={formData?.endDate || null}
                       onChange={(newValue) => {
                         updateFormData({ endDate: newValue });
-                        console.log(dayjs(newValue).format("YYYY-MM-DD"));
                       }}
                     />
                   </Box>
