@@ -9,7 +9,6 @@ const careServices = [
 ];
 
 const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
-
   const handleServiceSelect = (serviceId) => {
     onServiceSelect(serviceId);
   };
@@ -17,7 +16,7 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
   return (
     <div className="mt-10 mb-[50px]">
       <div className="bg-[#f0f9f0] p-6 rounded-3xl border border-gray-300">
-        <h2 className="text-[#1a472a] text-xl font-semibold mb-6">Choose Care Service</h2>
+        <h2 className="header">Choose Care Service</h2>
         <div className="space-y-3">
           {careServices.map((service) => (
             <div
@@ -48,14 +47,14 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
       <div className="flex gap-2 mt-[150px]">
         <button
           onClick={() => onSubmitBack()}
-          className="bg-white font-sofia font-bold border-2 border-primary w-full text-primary px-4 py-[16px] font-bold text-[14px] rounded-full transition-all duration-300 ease-in-out active:bg-secondary"
+          className="bg-white font-bold border-2 border-primary w-full text-primary px-4 py-[16px] font-bold text-[14px] rounded-full transition-all duration-300 ease-in-out active:bg-secondary"
         >
           Back
         </button>
         <button
           onClick={() => onSubmit()}
           disabled={!formData.selectedServices}
-          className={`font-sofia w-full ${
+          className={`w-full ${
             formData.selectedServices ? "bg-primary" : "bg-gray-400"
           } text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary`}
         >

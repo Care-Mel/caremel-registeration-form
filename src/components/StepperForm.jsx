@@ -12,9 +12,9 @@ const StepperForm = () => {
     name: "",
     phoneNumber: "",
     township: "",
-    detailAddress: "",
+    address: "",
     nearestBusStop: "",
-    busArrive: "",
+    busArrive: "no",
 
     // Form Two - Care Rules
     selectedServices: null,
@@ -28,7 +28,7 @@ const StepperForm = () => {
     paientDiseaseName: "",
     isDeaf: false,
     religion: "buddhism",
-    mobilityLevel: "independent",
+    mobilityLevel: "",
 
     // Form Four - Service Schedule
     startDate: "",
