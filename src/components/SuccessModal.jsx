@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function SuccessModal() {
   return (
-    <div className="flex flex-col justify-center items-center h-screen">
+    <div className="flex bg-background flex-col justify-center items-center h-screen">
       <div className="">
         {/* <img src={form} className="mx-auto mb-5" /> */}
         <div className="text-center">

@@ -1,10 +1,13 @@
 import { CircleAlert } from "lucide-react";
+import { useEffect } from "react";
 import { toast } from "sonner";
 // import { useNavigate } from "react-router-dom";
 
 const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
   // const navigate = useNavigate();
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="my-10">
       <div className="p-6 rounded-3xl shadow-sm border border-gray-300">

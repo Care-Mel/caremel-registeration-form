@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Toaster position="top-center" richColors />
-      <div className="min-h-screen md:w-[500px] mx-auto py-1 px-[24px] bg-background ">
+      <div className="">
         <div className="">
           <Routes>
             <Route path="/" element={<HomePage />} />

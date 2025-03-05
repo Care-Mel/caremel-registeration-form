@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import plus from "./../../assets/image/faPlus.png";
 import { CircleAlert, ChevronDown } from "lucide-react";
@@ -19,6 +19,10 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
     { value: "hinduism", label: "Hinduism" },
     { value: "other", label: "Other" },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const mobilityLevels = [
     { value: "1", label: "lying in bed" },

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 
 const careServices = [
   { id: "infant", label: "Infant Care" },
@@ -12,6 +12,10 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
   const handleServiceSelect = (serviceId) => {
     onServiceSelect(serviceId);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="mt-10 mb-[50px]">

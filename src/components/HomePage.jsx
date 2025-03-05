@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-center h-[100vh]">
+    <div className="flex justify-center items-center h-[100vh] bg-background md:w-[500px] mx-auto py-1 px-[24px] ">
       <div className="flex flex-col justify-center items-center mt-40">
         <svg
           width="212"
@@ -33,7 +33,7 @@ function HomePage() {
         </p>
         <button
           onClick={() => navigate("/form")}
-          className="font-sofia w-full bg-primary text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary"
+          className="w-full bg-primary text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary"
         >
           Next
         </button>

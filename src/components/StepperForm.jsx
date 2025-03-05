@@ -81,7 +81,7 @@ const StepperForm = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="overflow-hidden bg-background md:w-[500px] mx-auto py-1 px-[24px]">
       <div className="mt-5 mb-[30px]">
         <p className="text-3xl font-semibold text-secondary">Caregiver Booking Form</p>
       </div>

@@ -14,6 +14,7 @@ import "dayjs/locale/de";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { useEffect } from "react";
 
 // import { useNavigate } from "react-router-dom";
 
@@ -68,6 +69,10 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
       // window.alert(error.response.data.message);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // console.log(addref.current.value);
 
   return (
