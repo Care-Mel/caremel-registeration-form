@@ -93,7 +93,7 @@ const BookingInfo = ({ onSubmit, formData, updateFormData }) => {
             }
             onSubmit();
           }}
-          className={`font-sofia w-full text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary ${
+          className={`w-full text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary ${
             !formData.name ||
             !formData.phoneNumber ||
             !formData.township ||
