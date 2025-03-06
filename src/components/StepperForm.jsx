@@ -28,7 +28,7 @@ const StepperForm = () => {
     paientDiseaseName: "",
     isDeaf: false,
     religion: "buddhism",
-    mobilityLevel: "",
+    mobilityLevel: null,
 
     // Form Four - Service Schedule
     startDate: "",
