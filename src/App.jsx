@@ -5,6 +5,7 @@ import StepperForm from "./components/StepperForm";
 import HomePage from "./components/HomePage";
 import SuccessModal from "./components/SuccessModal";
 import { Toaster } from "sonner";
+import Term from "./components/Term";
 
 function App() {
   // const navigate = useNavigate();
@@ -15,6 +16,7 @@ function App() {
         <div className="">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/term" element={<Term />} />
             <Route path="/form" element={<StepperForm />} />
             <Route path="*" element={<Navigate to="/" replace />} />
             <Route path="/success" element={<SuccessModal />} />
