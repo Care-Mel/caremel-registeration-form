@@ -1,15 +1,9 @@
-// import { useRef, useState } from "react";
-// import { DatePicker } from "rsuite";
 import { CircleAlert } from "lucide-react";
-// import DatePicker from "react-datepicker";
 import axios from "axios";
-import "react-datepicker/dist/react-datepicker.css";
-// import dayjs from "dayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Box } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-// import { de } from "date-fns/locale";
 import "dayjs/locale/de";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
@@ -76,7 +70,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
   // console.log(addref.current.value);
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="de">
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en">
       <div className="mt-10">
         <div className="p-6 rounded-3xl shadow-sm border border-gray-300 mt-5 mb-10">
           <div className="space-y-6">
@@ -98,7 +92,32 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                     />
                   </Box>
                 </div>
-                <div>
+                <div className="w-full">
+                  <label className="label">Choose ending date</label>
+                  <Box
+                    components={["DatePicker"]}
+                    sx={{ width: "100%", backgroundColor: "white", marginTop: "8px" }}
+                  >
+                    <DatePicker
+                      sx={{ width: "100%" }}
+                      value={formData?.endDate || null}
+                      onChange={(newValue) => {
+                        if (newValue < formData.startDate) {
+                          toast.error("Ending date must be greater than starting date.");
+                          return;
+                        }
+                        updateFormData({ endDate: newValue });
+                      }}
+                    />
+                  </Box>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#f0f9f0] rounded-xl">
+              <h3 className="header">Service Ending Date</h3>
+              <div className="space-y-3">
+                <div className="w-full">
                   <label className="label">Choose starting time</label>
                   <div className="relative mt-2">
                     <input
@@ -128,32 +147,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="bg-[#f0f9f0] rounded-xl">
-              <h3 className="header">Service Ending Date</h3>
-              <div className="space-y-3">
-                <div>
-                  <label className="label">Choose ending date</label>
-                  <Box
-                    components={["DatePicker"]}
-                    sx={{ width: "100%", backgroundColor: "white", marginTop: "8px" }}
-                  >
-                    <DatePicker
-                      sx={{ width: "100%" }}
-                      value={formData?.endDate || null}
-                      onChange={(newValue) => {
-                        if (newValue < formData.startDate) {
-                          toast.error("Ending date must be greater than starting date.");
-                          return;
-                        }
-                        updateFormData({ endDate: newValue });
-                      }}
-                    />
-                  </Box>
-                </div>
-                <div>
+                <div className="w-full">
                   <label className="label">Choose ending time</label>
                   <div className="relative mt-2">
                     <input

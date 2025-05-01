@@ -18,7 +18,7 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
   }, []);
 
   return (
-    <div className="mt-10 mb-[50px]">
+    <div className="mt-10 mb-10">
       <div className="bg-[#f0f9f0] p-6 rounded-3xl border border-gray-300">
         <h2 className="header">Choose Care Service</h2>
         <div className="space-y-3">
@@ -48,7 +48,7 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
           ))}
         </div>
       </div>
-      <div className="flex gap-2 mt-[150px]">
+      <div className="flex gap-2 mt-[100px]">
         <button
           onClick={() => onSubmitBack()}
           className="bg-white font-bold border-2 border-primary w-full text-primary px-4 py-[16px] font-bold text-[14px] rounded-full transition-all duration-300 ease-in-out active:bg-secondary"
