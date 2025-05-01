@@ -18,7 +18,7 @@ const Term = () => {
       {/* Information Privacy Section */}
       <section className="mb-6">
         <h2 className="text-[20px] font-medium text-secondary mb-3">
-          Service အသုံးပြုသူ၏ တာဝန်ဝတ္တရားများ{" "}
+          1. Service အသုံးပြုသူ၏ တာဝန်ဝတ္တရားများ{" "}
         </h2>
         <ul className="space-y-4 list-disc list-inside">
           <li className="text-gray-600 text-[16px]">
@@ -43,7 +43,7 @@ const Term = () => {
 
       {/* Payment Rule Section */}
       <section className="mb-6">
-        <h2 className="text-[20px] font-medium text-secondary mb-3">ငွေပေးချေမှုနှုန်းထား</h2>
+        <h2 className="text-[20px] font-medium text-secondary mb-3">2. ငွေပေးချေမှုနှုန်းထား</h2>
         <ul className="space-y-4 list-disc list-inside">
           <li className="text-gray-600 text-[16px]">
             နေ့စဉ်၊ အပတ်စဉ်၊ လစဉ် လုပ်ငန်းတာဝန်များအတွက် ငွေတောင်းခံလွှာများ ထုတ်ပေးမည်ဖြစ်ပြီး
@@ -64,7 +64,7 @@ const Term = () => {
       {/* Safety Promises Section */}
       <section className="mb-6">
         <h2 className="text-[20px] font-medium text-secondary mb-3">
-          Caregiver ဝန်ဆောင်မှုပေးသူအား စစ်ဆေးခြင်းနှင့် အရည်အချင်း
+          3. Caregiver ဝန်ဆောင်မှုပေးသူအား စစ်ဆေးခြင်းနှင့် အရည်အချင်း
         </h2>
         <ul className="space-y-2 list-disc list-inside">
           <li className="text-gray-600 text-[16px]">
@@ -80,7 +80,7 @@ const Term = () => {
 
       <section className="mb-6">
         <h2 className="text-[20px] font-medium text-secondary mb-3">
-          Service Booking ပယ်ဖျက်ခြင်းနှင့်ပြန်အမ်း‌ငွေ မူဝါဒ
+          4. Service Booking ပယ်ဖျက်ခြင်းနှင့်ပြန်အမ်း‌ငွေ မူဝါဒ
         </h2>
         <ul className="space-y-2 list-disc list-inside">
           <li className="text-gray-600 text-[16px]">
@@ -125,8 +125,7 @@ const Term = () => {
       {/* Payment Rule Section */}
       <section className="mb-6">
         <h2 className="text-[20px] font-medium text-secondary mb-3">
-          {" "}
-          Caregivers ဝန်ဆောင်မှုပေးသူများအား တိုက်ရိုက်တာဝန်ပေးခန့်အပ်ခြင်း
+          5. Caregivers ဝန်ဆောင်မှုပေးသူများအား တိုက်ရိုက်တာဝန်ပေးခန့်အပ်ခြင်း
         </h2>
         <ul className="space-y-4 list-disc list-inside">
           <li className="text-gray-600 text-[16px]">
@@ -145,7 +144,7 @@ const Term = () => {
         <div>
           {/* Payment Rule Section */}
           <section className="mb-6">
-            <h2 className="text-[20px] font-medium text-secondary mb-3"> စောင့်ထိန်းရန်</h2>
+            <h2 className="text-[20px] font-medium text-secondary mb-3">6. စောင့်ထိန်းရန်</h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
                 ကုမ္ပဏီမှ မိမိတို့၏ Service သုံးစွဲသူများထံမှ ပေးအပ်ထားသည့်/ ကောက်ယူထားသည့်
@@ -164,7 +163,7 @@ const Term = () => {
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
               {" "}
-              အိမ်တွင်း ဘေးကင်းလုံခြုံရေးနှင့်တာဝန်ယူမှု/တာဝန်ခံမှုများ
+              7. အိမ်တွင်း ဘေးကင်းလုံခြုံရေးနှင့်တာဝန်ယူမှု/တာဝန်ခံမှုများ
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -187,7 +186,8 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              အငြင်းပွားမှုပြဿနာများ၊ တိုင်ကြားမှုများနှင့် ဝန်ဆောင်မှုကို တိုင်းတာစောင့်ကြပ်ခြင်း
+              8. အငြင်းပွားမှုပြဿနာများ၊ တိုင်ကြားမှုများနှင့် ဝန်ဆောင်မှုကို
+              တိုင်းတာစောင့်ကြပ်ခြင်း
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -200,7 +200,7 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              Caregivers ဝန်ဆောင်မှုပေးသူများအား တိုက်ရိုက်တာဝန်ပေးခန့်အပ်ခြင်း
+              9. Caregivers ဝန်ဆောင်မှုပေးသူများအား တိုက်ရိုက်တာဝန်ပေးခန့်အပ်ခြင်း
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -218,7 +218,7 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              ကြိုတင်မှန်းဆ၍မရသည့် ကိစ္စရပ်များ
+              10. ကြိုတင်မှန်းဆ၍မရသည့် ကိစ္စရပ်များ
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -230,7 +230,9 @@ const Term = () => {
           </section>
 
           <section className="mb-6">
-            <h2 className="text-[20px] font-medium text-secondary mb-3">သဘောတူညီမှု ရပ်ဆဲခြင်း</h2>
+            <h2 className="text-[20px] font-medium text-secondary mb-3">
+              11. သဘောတူညီမှု ရပ်ဆဲခြင်း
+            </h2>
             <p className="text-[16px] font-bold my-5">
               အောက်ပါအခြေအနေများတွင် ချက်ချင်းရပ်စဲနိုင်သည်
             </p>
@@ -250,7 +252,7 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              သဘောတူညီမှုကာလလွန်တွင် တာဝန်ယူရမည့် ဝတ္တရားများ
+              12. သဘောတူညီမှုကာလလွန်တွင် တာဝန်ယူရမည့် ဝတ္တရားများ
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -263,7 +265,7 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              Service သုံးစွဲမှုရပ်ဆဲခြင်း
+              13. Service သုံးစွဲမှုရပ်ဆဲခြင်း
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
@@ -286,7 +288,7 @@ const Term = () => {
           </section>
 
           <section className="mb-6">
-            <h2 className="text-[20px] font-medium text-secondary mb-3">လျော်ကြေးပေးခြင်း</h2>
+            <h2 className="text-[20px] font-medium text-secondary mb-3">14. လျော်ကြေးပေးခြင်း</h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
                 Caregiver ဝန်ဆောင်မှုပေးသူ-Serviceသုံးစွဲသူတို့အကြား ဖြစ်ပေါ်လာသော
@@ -299,7 +301,7 @@ const Term = () => {
           </section>
 
           <section className="mb-6">
-            <h2 className="text-[20px] font-medium text-secondary mb-3">ပလက်ဖောင်းမူဝါဒ</h2>
+            <h2 className="text-[20px] font-medium text-secondary mb-3">15. ပလက်ဖောင်းမူဝါဒ</h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
                 ဤပလက်ဖောင်းသည် Caregiving စောင့်ရှောက်မှု Service အသုံးပြုလိုသူနှင့် Service
@@ -319,7 +321,7 @@ const Term = () => {
 
           <section className="mb-6">
             <h2 className="text-[20px] font-medium text-secondary mb-3">
-              ကိုယ်ရေးကိုယ်တာအချက်အလက် မူဝါဒ
+              16. ကိုယ်ရေးကိုယ်တာအချက်အလက် မူဝါဒ
             </h2>
             <ul className="space-y-4 list-disc list-inside">
               <li className="text-gray-600 text-[16px]">
