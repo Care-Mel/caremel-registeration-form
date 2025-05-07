@@ -12,6 +12,8 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
   const [mobilityLevel, setMobilityLevel] = useState(formData?.mobilityLevel || "");
   const selectedServices = formData?.selectedServices || null;
 
+  console.log(selectedServices);
+
   const religions = [
     { value: "buddhism", label: "Buddhism" },
     { value: "christianity", label: "Christianity" },
@@ -54,13 +56,19 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
 
           <div>
             <label className="label">Patient Age</label>
-            <input
-              type="number"
-              className="mt-2 w-full p-4 rounded-xl border-2 border-gray-400 focus:outline-none focus:border-primary"
-              placeholder="Enter patient age"
-              value={formData?.patientAge || ""}
-              onChange={(e) => updateFormData({ patientAge: e.target.value })}
-            />
+            <div className="mt-2 w-full p-4 rounded-xl border-2 border-gray-400 focus:outline-none focus:border-primary bg-white flex justify-between items-center">
+              <input
+                type="number"
+                placeholder="Enter patient age"
+                value={formData?.patientAge || ""}
+                className="w-full focus:outline-none"
+                // min={selectedServices === "Infant Care" ? 0 : 1}
+                onChange={(e) => updateFormData({ patientAge: e.target.value })}
+              />
+              <div className="text-gray-500 border-l pl-2">
+                {selectedServices === "Infant Care" ? "months" : "years"}
+              </div>
+            </div>
           </div>
 
           <div>
@@ -256,7 +264,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
           {/* Chronic __________________________________*/}
           {selectedServices === "Chronic Disease Care" && (
             <div>
-              {formData.hasInfection && (
+              {/* {formData.hasInfection && (
                 <div className="mb-5">
                   <label className="label">Patient Disease Name</label>
                   <input
@@ -267,7 +275,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
                     placeholder="Enter disease name"
                   />
                 </div>
-              )}
+              )} */}
               <div className="mb-5">
                 <label className="label">Is the patient Deaf or hard of hearing?</label>
                 <div className="flex mt-2 rounded-lg overflow-hidden border-2 border-primary">

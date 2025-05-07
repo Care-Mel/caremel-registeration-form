@@ -4,7 +4,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Box } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import "dayjs/locale/de";
+import "dayjs/locale/en-gb";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -50,16 +50,16 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
       ],
     };
 
-    // console.log(data);
+    console.log(data);
 
     try {
       const res = await axios.post("https://api.caremelmm.com/api/v1/customer-form", data);
-      // console.log(res);
+      console.log(res);
       if (res.status === 201) {
         navigate("/success");
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error);
       // window.alert(error.response.data.message);
     }
   };
@@ -70,7 +70,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
   // console.log(addref.current.value);
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en">
+    <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
       <div className="mt-10">
         <div className="p-6 rounded-3xl shadow-sm border border-gray-300 mt-5 mb-10">
           <div className="space-y-6">
