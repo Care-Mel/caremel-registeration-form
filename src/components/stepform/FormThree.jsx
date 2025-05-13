@@ -12,7 +12,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
   const [mobilityLevel, setMobilityLevel] = useState(formData?.mobilityLevel || "");
   const selectedServices = formData?.selectedServices || null;
 
-  console.log(selectedServices);
+  // console.log(selectedServices);
 
   const religions = [
     { value: "buddhism", label: "Buddhism" },
@@ -45,8 +45,7 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
         <div className="space-y-6">
           <div>
             <label className="label">
-              {selectedServices === "Infant Care" ||
-              selectedServices === "Child Care (3yrs - 12yrs)"
+              {selectedServices === "Infant Care" || selectedServices === "Child Care"
                 ? "Child Name"
                 : "Patient Name"}
             </label>

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
 const careServices = [
-  { id: "infant", label: "Infant Care" },
-  { id: "child", label: "Child Care (3yrs - 12yrs)" },
-  { id: "elderly", label: "Elderly Care" },
-  { id: "chronic", label: "Chronic Disease Care" },
-  { id: "hospital", label: "Hospital Companion Care" },
+  { id: "infant", label: "Infant Care", value: "Infant Care" },
+  { id: "child", label: "Child Care (3yrs - 12yrs)", value: "Child Care" },
+  { id: "elderly", label: "Elderly Care", value: "Elderly Care" },
+  { id: "chronic", label: "Chronic Disease Care", value: "Chronic Disease Care" },
+  { id: "hospital", label: "Hospital Companion Care", value: "Hospital Companion Care" },
 ];
 
 const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
@@ -25,9 +25,9 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
           {careServices.map((service) => (
             <div
               key={service.id}
-              onClick={() => handleServiceSelect(service.label)}
+              onClick={() => handleServiceSelect(service.value)}
               className={`flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-300 ease-in-out ${
-                formData.selectedServices === service.label
+                formData.selectedServices === service.value
                   ? "bg-primary text-white"
                   : "bg-white text-[#1a472a]"
               }`}
@@ -35,12 +35,12 @@ const CareRule = ({ onSubmit, onSubmitBack, onServiceSelect, formData }) => {
               <p className="font-medium">{service.label}</p>
               <div
                 className={`w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                  formData.selectedServices === service.label ? "border-white" : "border-gray-200"
+                  formData.selectedServices === service.value ? "border-white" : "border-gray-200"
                 }`}
               >
                 <div
                   className={`w-4 h-4 rounded-full ${
-                    formData.selectedServices === service.label ? "bg-white" : "bg-gray-200"
+                    formData.selectedServices === service.value ? "bg-white" : "bg-gray-200"
                   }`}
                 ></div>
               </div>
