@@ -59,8 +59,9 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
         navigate("/success");
       }
     } catch (error) {
-      toast.error(error);
-      // window.alert(error.response.data.message);
+      if (error) {
+        toast.error("Your form submission failed. Please try again.");
+      }
     }
   };
 
@@ -237,7 +238,14 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
           </button>
           <button
             onClick={() => submitForm()}
-            className=" w-full bg-primary text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary"
+            disabled={
+              !formData.startDate || !formData.endDate || !formData.startTime || !formData.endTime
+            }
+            className={` w-full text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary ${
+              !formData.startDate || !formData.endDate || !formData.startTime || !formData.endTime
+                ? "opacity-50 cursor-not-allowed bg-gray-400"
+                : "bg-primary"
+            }`}
           >
             Submit
           </button>

@@ -44,7 +44,12 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
 
         <div className="space-y-6">
           <div>
-            <label className="label">Patient Name</label>
+            <label className="label">
+              {selectedServices === "Infant Care" ||
+              selectedServices === "Child Care (3yrs - 12yrs)"
+                ? "Child Name"
+                : "Patient Name"}
+            </label>
             <input
               type="text"
               className="w-full mt-2 p-4 rounded-xl border-2 border-gray-400 focus:outline-none focus:border-primary"
@@ -407,7 +412,12 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
         </button>
         <button
           onClick={() => onSubmit()}
-          className="w-full bg-primary text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary"
+          disabled={!formData.patientName || !formData.patientAge}
+          className={`w-full text-white px-4 py-[16px] rounded-full font-bold text-[14px] flex justify-center items-center transition-all duration-300 ease-in-out active:bg-secondary ${
+            !formData.patientName || !formData.patientAge
+              ? "opacity-50 cursor-not-allowed bg-gray-400"
+              : "bg-primary"
+          }`}
         >
           Next
         </button>
