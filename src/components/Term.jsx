@@ -8,7 +8,7 @@ const Term = () => {
   return (
     <div className="p-4 max-w-2xl mx-auto">
       <h1 className="text-[24px] font-semibold text-secondary text-center mb-4">
-        Term & Conditions of Care Me! service
+        Term & Conditions of Care Mel service
       </h1>
 
       <p className="text-[16px] text-center tracking-wide  font-bold text-secondary mb-6">
