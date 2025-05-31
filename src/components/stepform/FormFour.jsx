@@ -53,7 +53,10 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
     console.log(data);
 
     try {
-      const res = await axios.post("https://api.caremelmm.com/api/v1/customer-form", data);
+      const res = await axios.post(
+        "https://care-mel-api-testing.onrender.com/api/v1/customer-form",
+        data
+      );
       console.log(res);
       if (res.status === 201) {
         navigate("/success");
