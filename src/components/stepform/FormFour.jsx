@@ -53,7 +53,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
     // console.log(data);
 
     try {
-      const res = await axios.post(import.meta.env.VITE_API_URL + "api/v1/customer-form", data);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}api/v1/customer-form`, data);
       // console.log(res);
       if (res.status === 201) {
         navigate("/success");
