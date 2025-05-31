@@ -30,7 +30,7 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
       startingTime: formData.startTime,
       endingDate: dayjs(formData.endDate).format("YYYY-MM-DD"),
       endingTime: formData.endTime,
-      additionalNotes: formData.additionalNotes,
+      additionalNote: formData.additionalNotes,
       patientInformation: [
         {
           patientName: formData.patientName,
@@ -50,14 +50,11 @@ const CaregiverPower = ({ onSubmitBack, formData, updateFormData }) => {
       ],
     };
 
-    console.log(data);
+    // console.log(data);
 
     try {
-      const res = await axios.post(
-        "https://care-mel-api-testing.onrender.com/api/v1/customer-form",
-        data
-      );
-      console.log(res);
+      const res = await axios.post(import.meta.env.VITE_API_URL + "api/v1/customer-form", data);
+      // console.log(res);
       if (res.status === 201) {
         navigate("/success");
       }

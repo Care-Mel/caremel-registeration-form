@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 // import plus from "./../../assets/image/faPlus.png";
 import { CircleAlert, ChevronDown } from "lucide-react";
 
@@ -79,7 +78,10 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
             <label className="label">Patient Gender</label>
             <div className="mt-2 flex rounded-lg overflow-hidden border-2 border-primary">
               <button
-                onClick={() => setGender("male")}
+                onClick={() => {
+                  updateFormData({ gender: "male" });
+                  setGender("male");
+                }}
                 className={`flex-1 p-4 transition-all duration-300 ease-in-out ${
                   gender === "male"
                     ? "bg-primary text-white shadow-md"
@@ -89,7 +91,10 @@ const HomeRule = ({ onSubmit, onSubmitBack, formData, updateFormData }) => {
                 Male
               </button>
               <button
-                onClick={() => setGender("female")}
+                onClick={() => {
+                  updateFormData({ gender: "female" });
+                  setGender("female");
+                }}
                 className={`flex-1 p-4 transition-all duration-300 ease-in-out ${
                   gender === "female"
                     ? "bg-primary text-white shadow-md"

@@ -6,19 +6,19 @@
   @apply text-secondary font-bold text-[20px] mb-5;
 }
 
-body {
-  background-color: "#C3EAC6";
-  font-family: "Myan San";
-}
-
-@font-face {
-  font-family: "Sofia Pro";
-  src: local("mmrtextb"), url("./assets/Fonts/mmrtextb.ttf") format("truetype");
-}
-
 @font-face {
   font-family: "Myan San";
   src: local("Z11-MyanSans-Bold"), url("./assets/Fonts/Z11-MyanSans-Bold") format("truetype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: local("mmrtextb"), url("./assets/Fonts/Outfit-Regular.ttf") format("truetype");
+}
+
+body {
+  background-color: "#C3EAC6";
+  font-family: "Outfit";
 }
 
 html {
